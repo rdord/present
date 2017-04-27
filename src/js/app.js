@@ -13,10 +13,7 @@ new p5((p) => {
     video = p.createVideo(['assets/bees.mp4', 'assets/bees.webm']);
   }
 
-	// Setup method
 	p.setup = () => {
-    // p.createCanvas(p.windowWidth, p.windowHeight);
-    // p.background(255, 255, 255);
     p.noCanvas();
     song.play();
     video.loop();
@@ -46,8 +43,5 @@ new p5((p) => {
     setInterval(setDate, 1000);
     setDate();
   }
-
-	// Draw method
-	p.draw = () => {};
 
 }, document.body);
