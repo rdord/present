@@ -15,8 +15,9 @@ new p5((p) => {
 
 	// Setup method
 	p.setup = () => {
-    p.createCanvas(p.windowWidth, p.windowHeight);
-    p.background(255, 255, 255);
+    // p.createCanvas(p.windowWidth, p.windowHeight);
+    // p.background(255, 255, 255);
+    p.noCanvas();
     song.play();
     video.loop();
 
