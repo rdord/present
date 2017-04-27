@@ -18,8 +18,8 @@ new p5((p) => {
     song.play();
     video.loop();
 
-    const secondHand = document.querySelector('.second');
-    const secondHand2 = document.querySelector('.second2');
+    const secondHand = p.select('.second');
+    const secondHand2 = p.select('.second2');
     let startHand2 = false;
     let secondsDegrees2 = 90;
 
@@ -27,16 +27,13 @@ new p5((p) => {
       const now = new Date();
       const seconds = now.getSeconds();
       const secondsDegrees = ((seconds / 60) * 360) + 90;
-      secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+      secondHand.style('transform', `rotate(${secondsDegrees}deg)`);
 
       if (secondsDegrees === 90) startHand2 = true;
 
       if (startHand2) {
-        secondHand2.style.transform = `rotate(${secondsDegrees2}deg)`;
+        secondHand2.style('transform', `rotate(${secondsDegrees2}deg)`);
         secondsDegrees2 -= 6;
-
-        if(secondsDegrees2 % 4 === 0)
-          secondHand2.style.fontSize -= 1;
       }
     }
 
